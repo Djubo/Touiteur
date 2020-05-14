@@ -91,7 +91,7 @@ myForm.addEventListener("submit", addTouit);
 
 // function refreshChat(){
     const request = new XMLHttpRequest();
-    request.open("GET", "http://touiteur.cefim-formation.org/list", true);
+    request.open("GET", "http://touiteur.???/list", true);
     request.addEventListener("readystatechange", ()=> {
         if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
             const response = JSON.parse(request.responseText);
@@ -127,7 +127,7 @@ document.getElementById("touitbtn").addEventListener("click", function(){
 function touitos(name,message){
 
         const addnote = new XMLHttpRequest();
-        addnote.open("POST", "http://touiteur.cefim-formation.org/send", true);
+        addnote.open("POST", "http://touiteur.???/send", true);
         addnote.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
         addnote.addEventListener("readystatechange", function() {
             if (addnote.readyState === XMLHttpRequest.DONE && addnote.status === 200) {
@@ -149,7 +149,7 @@ function touitos(name,message){
 function liker(idlike){
     
     let likerequest = new XMLHttpRequest();
-    likerequest.open("PUT", "http://touiteur.cefim-formation.org/likes/send", true);
+    likerequest.open("PUT", "http://touiteur.???/likes/send", true);
     likerequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     likerequest.addEventListener("readystatechange", function() {
         if (likerequest.readyState === XMLHttpRequest.DONE && likerequest.status === 200) {
@@ -174,7 +174,7 @@ function liker(idlike){
 function disliker(idlike){
     
     let dislikerequest = new XMLHttpRequest();
-    dislikerequest.open("DELETE", "http://touiteur.cefim-formation.org/likes/remove", true);
+    dislikerequest.open("DELETE", "http://touiteur.???/remove", true);
     dislikerequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     dislikerequest.addEventListener("readystatechange", function() {
         if (dislikerequest.readyState === XMLHttpRequest.DONE && dislikerequest.status === 200) {
@@ -198,7 +198,7 @@ function disliker(idlike){
 
 
 // const comrequest = new XMLHttpRequest();
-// comrequest.open("GET", "http://touiteur.cefim-formation.org/comments/list", true);
+// comrequest.open("GET", "http://touiteur.???/comments/list", true);
 // comrequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 // comrequest.addEventListener("readystatechange", function() {
 //     if (comrequest.readyState === XMLHttpRequest.DONE && comrequest.status === 200) {
@@ -230,7 +230,7 @@ function disliker(idlike){
 //     document.getElementById("body").style.overflow = "hidden";
     
 //     let comrequest = new XMLHttpRequest();
-//     comrequest.open("POST", "http://touiteur.cefim-formation.org/comments/send", true);
+//     comrequest.open("POST", "http://touiteur.???/comments/send", true);
 //     comrequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 //     comrequest.addEventListener("readystatechange", function() {
 //         if (comrequest.readyState === XMLHttpRequest.DONE && comrequest.status === 200) {
